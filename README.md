@@ -1,109 +1,108 @@
-# 🎭 Money Heist Personality Predictor
+🎭 Money Heist Personality Predictor
 
-An **ML-powered personality prediction web app** that analyzes a user's responses to 9 personality-based questions and predicts which **Money Heist character** they are most similar to.
+An interactive Machine Learning web application that predicts which Money Heist character best matches your personality based on your answers to 9 personality-based questions.
 
-The project combines **Machine Learning, Python, Pandas, Scikit-learn and Streamlit** to create an interactive personality prediction experience.
+The project combines Machine Learning, Python, Pandas, Scikit-learn and Streamlit to turn a trained classification model into an interactive web application.
 
-> ⚠️ This is a Money Heist-inspired entertainment project and is **not a scientific psychological assessment**.
+🚀 Live Demo
 
----
+👉 "Try the Money Heist Personality Predictor" (https://money-heist-personality-predictor.streamlit.app/)
 
-## 🚀 Demo
-
-Answer 9 personality-based questions and let the ML model predict your character.
-
-The app displays:
-
-* 🎭 Predicted Money Heist character
-* 🖼️ Character image
-* 🎯 Model confidence / match percentage
-* 📝 Short character description
-
-Example:
-
-**You are Berlin 🕴️**
-
-**Match: 90%**
-
-> Confident, organized, commanding and calculated.
+Answer the questions, reveal your result, and discover your Money Heist character match. 🎭
 
 ---
 
-## 🧠 How It Works
+✨ Features
 
-The application asks the user 9 questions based on different personality traits:
+- 🎯 Predicts a Money Heist character based on personality responses
+- 🧠 Uses a trained Machine Learning classification model
+- 🎭 Displays the predicted character
+- 🖼️ Shows the corresponding character image
+- 📊 Displays the predicted character's match percentage
+- 📝 Provides a short personality description
+- 💻 Interactive Streamlit interface
+- 🌐 Deployed as a live web application
 
-1. Risk Taking
-2. Leadership
-3. Emotionality
-4. Planning
-5. Social Interaction
-6. Impulsiveness
-7. Problem Solving
-8. Empathy
-9. Adaptability
+---
 
-Each answer is converted into a numerical value from **1 to 5**.
+🧠 How It Works
 
-These values are passed to the trained Machine Learning model.
+The application asks the user 9 personality-based questions.
 
-```text
-User Answers
-     ↓
-9 Personality Features
-     ↓
-Machine Learning Model
-     ↓
+Each answer is converted into a numerical value from 1 to 5 and passed to the trained Machine Learning model.
+
+User
+ ↓
+9 Personality Questions
+ ↓
+Numerical Features
+ ↓
+Random Forest Model
+ ↓
 Character Prediction
-     ↓
-Character Probability
-     ↓
-Photo + Match % + Description
-```
+ ↓
+Match Percentage
+ ↓
+Character Image + Description
 
 ---
 
-## 🤖 Machine Learning
+🎯 Personality Features
 
-The prediction model is saved as:
+The model uses the following personality-related features:
 
-```text
+Feature| What it represents
+Risk Taking| Comfort with risky situations
+Leadership| Tendency to take responsibility
+Emotionality| Influence of emotions on decisions
+Planning| Planning and preparation style
+Social| Interaction with other people
+Impulsiveness| Tendency to make quick decisions
+Problem Solving| Comfort with difficult problems
+Empathy| Consideration of others' feelings
+Adaptability| Ability to adjust to unexpected changes
+
+---
+
+🤖 Machine Learning Model
+
+The project uses a Random Forest Classifier for character prediction.
+
+The trained model is stored as:
+
 model_rf.pkl
-```
 
-The project uses a **Random Forest model** for character classification.
+The application also uses "predict_proba()" to calculate the probability of the predicted character.
 
-The model predicts one of the following characters:
+The model can predict characters such as:
 
-* Professor
-* Berlin
-* Tokyo
-* Rio
-* Nairobi
-* Denver
-* Moscow
-* Helsinki
-* Oslo
-
-The model's `predict_proba()` method is also used to calculate the predicted character's probability.
+- 🧠 Professor
+- 🕴️ Berlin
+- 🔥 Tokyo
+- 💻 Rio
+- 👑 Nairobi
+- 😄 Denver
+- ⛏️ Moscow
+- 🛡️ Helsinki
+- ⚔️ Oslo
 
 ---
 
-## 🛠️ Technologies Used
+🛠️ Tech Stack
 
-* **Python**
-* **Pandas**
-* **Scikit-learn**
-* **Streamlit**
-* **Pickle**
-* **Machine Learning**
-* **Git & GitHub**
+- Python
+- Pandas
+- Scikit-learn
+- Streamlit
+- Pickle
+- Machine Learning
+- GitHub
+- Streamlit Cloud
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 
-```text
 Money-Heist-Personality/
 │
 ├── app.py
@@ -120,113 +119,99 @@ Money-Heist-Personality/
     ├── Moscow.jpg
     ├── Helsinki.jpg
     └── Oslo.jpg
-```
 
 ---
 
-## ⚙️ Installation
+▶️ Run Locally
 
 Clone the repository:
 
-```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
-```
 
-Move into the project directory:
+Navigate into the project:
 
-```bash
 cd Money-Heist-Personality
-```
 
-Install the required libraries:
+Install dependencies:
 
-```bash
 pip install -r requirements.txt
-```
 
----
+Run the application:
 
-## ▶️ Run the Application
-
-Run the Streamlit application:
-
-```bash
 streamlit run app.py
-```
-
-The application will open in your browser.
 
 ---
 
-## 📊 Features
+🌐 Deployment
 
-### 🎯 Personality Prediction
+The application is deployed using Streamlit Community Cloud.
 
-Predicts the Money Heist character that best matches the user's responses.
+Live Application
 
-### 🖼️ Character Images
-
-Displays the corresponding character image after prediction.
-
-### 📈 Match Percentage
-
-Shows only the predicted character's model probability instead of displaying a complete probability table.
-
-### 📝 Character Description
-
-Provides a short description explaining the personality style associated with the predicted character.
-
-### 💻 Interactive UI
-
-Built using Streamlit for a simple and interactive web experience.
+👉 https://money-heist-personality-predictor.streamlit.app/
 
 ---
 
-## 🎯 Project Objective
+🎓 Project Objective
 
-The main goal of this project was to build an **end-to-end Machine Learning application** rather than just training a model in a Jupyter Notebook.
+The main objective of this project was to build a practical end-to-end Machine Learning application.
 
-It demonstrates how a trained ML model can be connected to a real interactive frontend where users provide input and receive an immediate prediction.
+Instead of keeping the ML model limited to a Jupyter Notebook, the trained model was integrated with a Streamlit frontend where users can interact with the model and receive an immediate prediction.
+
+This project helped demonstrate the complete workflow:
+
+Dataset
+   ↓
+Data Preparation
+   ↓
+Model Training
+   ↓
+Model Saving
+   ↓
+Streamlit Frontend
+   ↓
+Model Integration
+   ↓
+Deployment
 
 ---
 
-## 🔮 Future Improvements
+🔮 Future Improvements
 
-Some possible improvements for future versions:
+Possible future improvements include:
 
-* Improve the personality dataset
-* Experiment with different ML algorithms
-* Improve model accuracy
-* Add more Money Heist characters
-* Add a more cinematic Money Heist-inspired UI
-* Deploy the application online
-* Add personality-trait analysis
-* Store anonymous prediction statistics
+- Improve the training dataset
+- Experiment with different classification algorithms
+- Improve model performance
+- Add more personality traits
+- Add more characters
+- Create a more cinematic UI
+- Add animations and better result cards
+- Improve the questionnaire
+- Add more detailed personality analysis
 
 ---
 
-## 👨‍💻 Author
+👨‍💻 Author
 
-**Karan Sharma**
+Karan Sharma
 
 BCA (AI) Student | Aspiring AI/ML Developer
 
-Interested in:
+Currently learning and building projects in:
 
-* Machine Learning
-* Artificial Intelligence
-* Data Science
-* Python
-* Building practical ML applications
-
----
-
-## ⭐ If You Like This Project
-
-If you found this project interesting, consider giving the repository a ⭐ on GitHub!
+- Python
+- Data Science
+- Machine Learning
+- Artificial Intelligence
+- Streamlit
 
 ---
 
-### ⚠️ Disclaimer
+⚠️ Disclaimer
 
-This project is created for **educational and entertainment purposes**. The predictions are fictional character matches based on a trained Machine Learning model and should not be interpreted as a professional psychological evaluation.
+This project is created for educational and entertainment purposes.
+
+The character prediction is based on a Machine Learning model trained for this project and should not be considered a scientific or professional psychological assessment.
+
+The project is inspired by the fictional world of Money Heist.
